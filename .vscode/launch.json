@@ -1,0 +1,35 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Lambda debugging",
+      // "skipFiles": [
+      //   "<node_internals>/**"
+      // ],
+      // "program": "${file}",
+      // "preLaunchTask": "tsc: build - tsconfig.json",
+      // "outFiles": [
+      //   "${workspaceFolder}/dist/**/*.js"
+      // ]
+      "runtimeArgs": [
+        // "--nolazy",
+        "-r",
+        "ts-node/register"
+      ],
+      "args": [
+        // "${file}"
+        "${relativeFile}"
+      ],
+      // "cwd": "${workspaceFolder}",
+      "env": {
+        // "NODE_ENV": "development"
+        "AWS_REGION": "us-east-1",
+      }
+    }
+  ]
+}

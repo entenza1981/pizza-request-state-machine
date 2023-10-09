@@ -1,0 +1,7 @@
+
+POST https://0dd6ii1dui.execute-api.us-east-1.amazonaws.com/prod/pizza
+{
+  "containsPineapple": "Pepperoni",
+  
+}
+
