@@ -19,7 +19,7 @@ describe("Pizza Request API Gateway Test Suite", () => {
     apiStackTemplate = Template.fromStack(apiStack);
   });
 
-  test("API Gateway Definition", async () => {
+  test("API Gateway Definition", () => {
     apiStackTemplate.hasResourceProperties("AWS::ApiGateway::RestApi", {
       Description: "The best place to have a pizza!",
       Name: "Pizza Service",
