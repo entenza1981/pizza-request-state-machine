@@ -59,11 +59,9 @@ describe("Pizza Request API Gateway Test Suite", () => {
       )
       .map(([_key, resource]) => resource)
       .shift();
-    // .map(([_key, resource]) => resource);
-    // console.log(JSON.stringify(postMethod, null, 2));
+      
     expect(postMethod).toBeDefined();
 
-    // postMethod.Properties.Integration.Type = "AWS";
     const uris = postMethod?.Properties.Integration.Uri["Fn::Join"];
     const uri = uris
       .flatMap((uri: string | [object]) => uri)
@@ -72,11 +70,5 @@ describe("Pizza Request API Gateway Test Suite", () => {
     expect(
       uri.includes("StartExecution") || uri.includes("StartSyncExecution")
     ).toBeTruthy();
-
-    // .shouldMatch(
-    //   /arn:aws:apigateway:us-east-1:states:action\/StartExecution/
-    // );
-
-    // postMethod.u
   });
 });

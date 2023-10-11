@@ -1,11 +1,6 @@
 import { Stack, StackProps, Duration } from "aws-cdk-lib";
 import * as sfn from "aws-cdk-lib/aws-stepfunctions";
 import { Construct } from "constructs";
-import { NodejsFunction } from "aws-cdk-lib/aws-lambda-nodejs";
-import { Runtime } from "aws-cdk-lib/aws-lambda";
-
-import { join } from "path";
-import * as tasks from "aws-cdk-lib/aws-stepfunctions-tasks";
 import * as logs from "aws-cdk-lib/aws-logs";
 
 import { getPizzaRequestLambdaFunctions } from "./pizza-request-lambda.functions";

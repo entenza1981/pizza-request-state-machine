@@ -1,4 +1,4 @@
-PizzaOrder Machine State
+Pizza Request Machine State
 
 Descripción.
 This is a simple app to the basic elements for using the CDK framework.
@@ -81,7 +81,11 @@ and at the end of the process you will see a url (link) you will copy the url.. 
 ```
 https://o8f1j3f9o4.execute-api.us-east-1.amazonaws.com/prod/pizza
 ```
-
+<div align="center">
+  <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="images/final.png" >
+  </a>
+</div>
 
 As is shown in the order of the exercise .. you will perform a post request.. with a request body like this one.
 ```
