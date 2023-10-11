@@ -12,11 +12,17 @@ export class PizzaApiStack extends Stack {
   constructor(scope: Construct, id: string, props: PizzaApiStackProps) {
     super(scope, id, props);
 
+    /**
+     * API Gateway
+     */
     const api = new RestApi(this, "PizzaApi", {
       restApiName: "Pizza Service",
       description: "The best place to have a pizza!",
     });
 
+    /**
+     * API Gateway Resources (POST /pizza)
+     */
     const spacesResource = api.root.addResource("pizza");
 
     spacesResource.addMethod(

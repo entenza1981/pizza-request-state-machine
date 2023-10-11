@@ -1,8 +1,10 @@
 import { APIGatewayProxyEvent, Context } from "aws-lambda";
 import { StepFunctions } from "aws-sdk";
-
+/**
+ * Extra info to send al over the flow
+ */
 const extraInfo = (
-  flavor: string,
+  flavour: string,
 ) => {
 
   console.log("===============================================");
@@ -11,7 +13,7 @@ const extraInfo = (
   return {
 
     executionArn: "arn:aws:...",
-    input: { flavor },
+    input: { flavour },
     inputDetails: {
       __type:
         "com.amazonaws.swf.base.model#CloudWatchEventsExecutionDataDetails",
@@ -27,20 +29,28 @@ const extraInfo = (
 type BodyRequest = {
   flavour: string;
 };
+
+
+/**
+ * 
+ * This function is used to fetch the flavor from the request
+ * and throw an error if the flavor is not specified
+ */
 const getFlavor = (
   bodyrequest: BodyRequest,
-  
 ) => {
   const { flavour } = bodyrequest;
-
   if (!flavour) {
-    console.error("Flavor property not found on request");
     throw new Error("Flavor property must be specified");
   }
 
   return flavour;
 };
 
+/**
+ * 
+ * Just fetch the flavor from the request and put it into the response
+ */
 export const main = async (event: any, context: Context) => {
   console.log("event: ", { event });
   console.log("context: ", { context });

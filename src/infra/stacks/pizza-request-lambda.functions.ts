@@ -11,6 +11,7 @@ export const getPizzaRequestLambdaFunctions = (stack: Stack) => {
   const runtime = Runtime.NODEJS_18_X;
   const handler = "main";
 
+  /** ------------------ Lambda Function Definition ------------------ */
   const orderPizzaLambdaPath = join(basePath, "order-pizza.ts");
   const orderPizzaLambda = new NodejsFunction(stack, "OrderPizzaLambda", {
     runtime,

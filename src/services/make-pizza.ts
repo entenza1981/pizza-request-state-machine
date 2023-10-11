@@ -1,5 +1,10 @@
 import { Context } from "aws-lambda";
 
+/**
+ * 
+ * This function is used to add some information to the final response
+ * 
+ */
 export const main = async (event: any, context: Context) => {
   
   console.log("Envent Info...", { event });
