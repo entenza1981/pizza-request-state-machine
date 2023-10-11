@@ -10,10 +10,14 @@ the order of the exercise can be found in [here..](https://github.com/cdk-patter
 Steps.
 
 - create a new directory with the name you want Ej.
+  ```
   mkdir pizzatask
+  ```
 
 - get into the directory you made
+  ```
   cd pizzatask
+  ```
 
 - now lets create the aws user to peform the deploy of the application (if you have one already, you can skip this step)
 if you want to know to create the user in the Amazon console.. plese fallow this [link](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html)
@@ -74,13 +78,14 @@ You my need to type 'y' at some point in the deploitment in order to proceed and
 
 and at the end of the process you will see a url (link) you will copy the url.. and you will add the word "pizza" as the following example
 
-
+```
 https://o8f1j3f9o4.execute-api.us-east-1.amazonaws.com/prod/pizza
+```
 
 
 As is shown in the order of the exercise .. you will perform a post request.. with a request body like this one.
-
+```
 {
     "flavour": "pineapple"
 }
-
+```
